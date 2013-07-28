@@ -1,6 +1,8 @@
 cloudAtlas-Meteor-App
 =====================
 
-Une application de classement pour tester Meteor
+A simple app experiment for categorization using Meteor.JS 
 
-cloudAtlas.meteor.com
+Une application de classement pour tester Meteor.JS
+
+  => cloudAtlas.meteor.com
