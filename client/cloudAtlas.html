@@ -1,0 +1,106 @@
+<head>
+  <title>cloudAtlas</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>CloudAtlas</h1>
+        <div id="cloud-search">
+            {{> cloudSearch}}
+        </div>
+        <div id="cloud-form">
+            {{> cloudForm}}
+        </div>
+        <div class="alert added">
+          Added !
+        </div>
+        <div id="cloud-atlas">
+            {{> cloudAtlas}}
+        </div>
+    </div>
+    
+</body>
+
+
+
+
+<template name="cloudAtlas">
+    <h2 id="all">//See All Clouds</h2>
+	<ul id="atlas">
+    	{{#each clouds}}
+			<li>
+            	 <div class="remove">X</div>
+                 <span class="italic black">{{this.cloudTitle}} {{this.cloudSubTitle}} : {{this.cloudType}}</span><br/>Comment : {{this.cloudComment}}
+
+            </li>
+         {{/each}}
+	</ul>
+</template>
+
+
+
+
+<template name="cloudForm">
+     <form>
+        <p>REGISTER A CLOUD</p>
+        <input id="cloudTitle" class="feedback-input" placeholder="Title" required />
+        <input id="cloudSubTitle" class="feedback-input" placeholder="SubTitle"required />
+        <select id="cloudType" required>
+        	<option value="0">CHOOSE</option>
+           	<option value="field1">field1</option>
+            <option value="field2">field2</option>
+            <option value="field3">field3</option>
+            <option value="field4">field4</option>
+            <option value="field5">field5</option>
+            <option value="field6">field6</option>
+            <option value="field7">field7</option>
+            <option value="field8">field8</option>
+            <option value="field9">field9</option>
+            <option value="field10">field10</option>
+            <option value="field11">field11</option>
+            <option value="field12">field12</option>
+            <option value="field13">field13</option>
+            <option value="field14">field14</option>
+            <option value="field15">field15</option>
+        </select>
+        <textarea rows="4" cols="40" id="cloudComment" class="feedback-input" placeholder="A little comment ?"></textarea>
+        <div class="submit">
+            <input type="submit" value="Add New Cloud" class="btn-submit button-blue" />
+        </div>
+        </form>
+</template>
+
+
+
+
+
+<template name="cloudSearch">
+    <form>
+        <p>SEARCH FOR A CLOUD</p>
+        <select id="search-for-a-cloud" required>
+            <option value="0">CHOOSE</option>
+            <option value="field1">field1</option>
+            <option value="field2">field2</option>
+            <option value="field3">field3</option>
+            <option value="field4">field4</option>
+            <option value="field5">field5</option>
+            <option value="field6">field6</option>
+            <option value="field7">field7</option>
+            <option value="field8">field8</option>
+            <option value="field9">field9</option>
+            <option value="field10">field10</option>
+            <option value="field11">field11</option>
+            <option value="field12">field12</option>
+            <option value="field13">field13</option>
+            <option value="field14">field14</option>
+            <option value="field15">field15</option>
+        </select>
+    </form>
+	<ul>
+    	{{#each clouds}}
+			<li class="item {{this.cloudType}}">
+            	<span class="italic black">{{this.cloudTitle}} {{this.cloudSubTitle}}</span><br/>Comment : {{this.cloudComment}}
+            </li>
+         {{/each}}
+	</ul>
+</template>
