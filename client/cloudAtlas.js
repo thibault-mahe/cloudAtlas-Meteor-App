@@ -4,7 +4,7 @@ var Clouds = new Meteor.Collection('clouds');
 	Template.cloudAtlas.clouds = function(){
 		return Clouds.find({});
 	}
-
+	//Give the possibility of removing clouds
 	Template.cloudAtlas.events = {
   		'click .remove': function () {
     		Clouds.remove(this._id);
