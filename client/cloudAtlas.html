@@ -25,15 +25,15 @@
 
 
 <template name="cloudAtlas">
-    <h2 id="all">//See All Clouds</h2>
+    <h3 id="all">//See All Clouds</h3>
 	<ul id="atlas">
-    	{{#each clouds}}
-			<li>
-            	 <div class="remove">X</div>
-                 <span class="italic black">{{this.cloudTitle}} {{this.cloudSubTitle}} : {{this.cloudType}}</span><br/>Comment : {{this.cloudComment}}
+        {{#each clouds}}
+		<li>
+            <div class="remove">X</div>
+            <span class="italic black">{{this.cloudTitle}} {{this.cloudSubTitle}} : {{this.cloudType}}</span><br/>Comment : {{this.cloudComment}}
 
-            </li>
-         {{/each}}
+        </li>
+        {{/each}}
 	</ul>
 </template>
 
@@ -41,12 +41,12 @@
 
 
 <template name="cloudForm">
-     <form>
-        <p>REGISTER A CLOUD</p>
+    <form>
+        <h2>REGISTER A CLOUD</h2>
         <input id="cloudTitle" class="feedback-input" placeholder="Title" required />
         <input id="cloudSubTitle" class="feedback-input" placeholder="SubTitle"required />
         <select id="cloudType" required>
-        	<option value="0">CHOOSE</option>
+            <option value="0">CHOOSE</option>
            	<option value="field1">field1</option>
             <option value="field2">field2</option>
             <option value="field3">field3</option>
@@ -63,11 +63,11 @@
             <option value="field14">field14</option>
             <option value="field15">field15</option>
         </select>
-        <textarea rows="4" cols="40" id="cloudComment" class="feedback-input" placeholder="A little comment ?"></textarea>
+        <textarea rows="4" cols="40" id="cloudComment" class="feedback-input" placeholder="Comment" required></textarea>
         <div class="submit">
             <input type="submit" value="Add New Cloud" class="btn-submit button-blue" />
         </div>
-        </form>
+    </form>
 </template>
 
 
@@ -76,7 +76,7 @@
 
 <template name="cloudSearch">
     <form>
-        <p>SEARCH FOR A CLOUD</p>
+        <h2>SEARCH FOR A CLOUD</h2>
         <select id="search-for-a-cloud" required>
             <option value="0">CHOOSE</option>
             <option value="field1">field1</option>
@@ -98,9 +98,9 @@
     </form>
 	<ul>
     	{{#each clouds}}
-			<li class="item {{this.cloudType}}">
-            	<span class="italic black">{{this.cloudTitle}} {{this.cloudSubTitle}}</span><br/>Comment : {{this.cloudComment}}
-            </li>
-         {{/each}}
+		<li class="item {{this.cloudType}}">
+            <span class="italic black">{{this.cloudTitle}} {{this.cloudSubTitle}}</span><br/>Comment : {{this.cloudComment}}
+        </li>
+        {{/each}}
 	</ul>
 </template>

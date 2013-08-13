@@ -1,9 +1,9 @@
-var Clouds = new Meteor.Collection('clouds');
+var Atlas = new Meteor.Collection('clouds');
 
 Meteor.startup(function () {
    	//Clouds.remove({}); 
 
-   	Clouds.allow({
+   	Atlas.allow({
   		insert: function (userId, doc) {
     		return true;
   		},
