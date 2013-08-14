@@ -1,34 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>CloudAtlas : une application pour tester Meteor.JS (tutoriel Fr) by tibomahe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <title>CloudAtlas : une application pour tester Meteor.JS (tutoriel Fr) by tibomahe</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
+    <header>
+      <div class="inner">
         <h1>CloudAtlas : une application pour tester Meteor.JS (tutoriel Fr)</h1>
-        <p>A simple app experiment for categorization using Meteor.JS </p>
+        <h2>A simple app experiment for categorization using Meteor.JS </h2>
+        <a href="https://github.com/tibomahe/cloudAtlas-Meteor-App" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
 
-        <p class="view"><a href="https://github.com/tibomahe/cloudAtlas-Meteor-App">View the Project on GitHub <small>tibomahe/cloudAtlas-Meteor-App</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/tibomahe/cloudAtlas-Meteor-App/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/tibomahe/cloudAtlas-Meteor-App/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/tibomahe/cloudAtlas-Meteor-App">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h1>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
 <a name="tester-meteor-sous-mac-le-framework-des-applications-de-demain" class="anchor" href="#tester-meteor-sous-mac-le-framework-des-applications-de-demain"><span class="octicon octicon-link"></span></a>TESTER METEOR SOUS MAC, LE FRAMEWORK DES APPLICATIONS DE DEMAIN</h1>
 
 <p>Meteor est un framework Javascript assez récent permettant de développer des pages dynamiques et des applications en un rien de temps mais également en très peu de ligne de codes. Utilisant notamment Node.js, Meteor permet de développer son application uniquement en Javascript, côté client aussi bien, et c'est là la force du framework, que côté serveur. Une merveilleuse idée quand on constate le succès que connait aujourd'hui le langage, notamment simplifié et démocratisé par jQuery. Une merveilleuse idée surtout pour nous autres débutants qui apprécierons grandement de n'avoir qu'un seul langage de programmation à gérer, et à tenter de comprendre. </p>
@@ -61,7 +61,7 @@ Pour Mac, il suffira de taper cette ligne de code :</p>
 <pre><code>curl https://install.meteor.com | /bin/sh
 </code></pre>
 
-<p>L'installation nécessitera sans doute votre mot de passe de session utilisateur, et parfois l'ajout de l'entête sudo avant la ligne de code.</p>
+<p>L'installation nécessitera sans doute votre mot de passe de session utilisateur, et parfois l'ajout de l'entête <em>sudo</em> avant la ligne de code.</p>
 
 <p>Pour créer l'application, il suffit de rester dans le Terminal est de taper tout simplement :</p>
 
@@ -120,7 +120,7 @@ if (Meteor.isServer) {
 
 <p>Voyons à quoi ressemble notre code HTML.</p>
 
-<p>Tout d'abord, il est nécessaire de définir un titre dans les balises head, sans avoir à préciser cependant la mention du &lt;!DOCTYPE&gt; :
+<p>Tout d'abord, il est nécessaire de définir un titre dans les balises head, sans avoir à préciser cependant la mention du &lt; !DOCTYPE &gt; :
     </p>
         cloudAtlas<p>Puis dans le body, nous faisons apparaître les trois parties de notre application :</p>
 
@@ -140,9 +140,9 @@ if (Meteor.isServer) {
 &lt;/body&gt;
 </code></pre>
 
-<p>Les trois parties sont intégrées dans une     </p><div> englobante (« app ») qui facilitera la manipulation par la suite avec le CSS. L'application commence par un titre sobrement appelé « CloudAtlas ». Le code de chaque partie est à préciser : il s'agit tout simplement de trois <div> possédant chacune un id distinctif afin de pouvoir les manipuler plus facilement et désignant la position des parties. Chaque partie ne contient qu'une variable mise entre double accolades et désignant chacune le template à laquelle elle se réfère. Bien évidemment, chacun de ces 3 templates est à définir directement après la fermeture du body.
+<p>Les trois parties sont intégrées dans une &lt; div &gt; englobante (« app ») qui facilitera la manipulation par la suite avec le CSS. L'application commence par un titre sobrement appelé « CloudAtlas ». Le code de chaque partie est à préciser : il s'agit tout simplement de trois &lt; div &gt; possédant chacune un id distinctif afin de pouvoir les manipuler plus facilement et désignant la position des parties. Chaque partie ne contient qu'une variable mise entre double accolades et désignant chacune le template à laquelle elle se réfère. Bien évidemment, chacun de ces 3 templates est à définir directement après la fermeture du body.</p>
 
-<p>L'ordre est indifférent. Suivons l'ordre logique du processus et commençons par celui du milieu, c'est-à-dire le formulaire de création de « clouds », dont le template est intitulé ci-dessus « cloudForm ». La balise pour définir un template est tout simplement la balise  et celle, plus connue, pour un formulaire est     </p>. On obtient ainsi ceci :
+<p>L'ordre est indifférent. Suivons l'ordre logique du processus et commençons par celui du milieu, c'est-à-dire le formulaire de création de « clouds », dont le template est intitulé ci-dessus « cloudForm ». La balise pour définir un template est tout simplement la balise &lt; template &gt; &lt; / template &gt; et celle, plus connue, pour un formulaire est &lt; form &gt; &lt; / form &gt;. On obtient ainsi ceci :</p>
 
 <pre><code>&lt;template name="cloudForm"&gt;
      &lt;form&gt;
@@ -167,38 +167,48 @@ if (Meteor.isServer) {
 
 <p>On retrouve dans ce template uniquement un formulaire HTML très simple, comprenant deux inputs (les deux champs de titre et de sous-titre qui qualifient le « cloud » que l'on enregistre), un bouton select pour classer le cloud dans un des champs de référence (les 5 fields ici), un textarea ajouter un commentaire, et enfin le bouton submit pour demande à l'application d'enregistrer tous ces renseignements. Nous verrons par la suite ce qui se passe derrière tout ca.</p>
 
-<p>Demandons désormais à l'application d'afficher tous les « clouds » que l'on enregistre. Bien sûr, ca ne fonctionnera pas encore puisque nous n'avons pas encore attaquer le Javascript. Cette partie correspond au template intitulé ci-dessus « cloudAtlas ». On cherche pour l'instant à simplement afficher dans une liste     </p>
-<ul> faite de     <li> donc les différents « clouds ». Pour nous y retrouver sur l'interface utilisateur, il est utile ici d'ajouter un titre de section :
+<p>Demandons désormais à l'application d'afficher tous les « clouds » que l'on enregistre. Bien sûr, ca ne fonctionnera pas encore puisque nous n'avons pas encore attaquer le Javascript. Cette partie correspond au template intitulé ci-dessus « cloudAtlas ». On cherche pour l'instant à simplement afficher dans une liste &lt; ul &gt; faite de &lt; li &gt; donc les différents « clouds ». Pour nous y retrouver sur l'interface utilisateur, il est utile ici d'ajouter un titre de section :</p>
 
-<p><h2>
-<a name="see-all-clouds" class="anchor" href="#see-all-clouds"><span class="octicon octicon-link"></span></a>//See All Clouds</h2>
-        <ul>
+<pre><code>&lt;template name="cloudAtlas"&gt;
+    &lt;h2&gt;//See All Clouds&lt;/h2&gt;
+    &lt;ul &gt;
         {{#each clouds}}
-         <li>
-               {{this.cloudTitle}} {{this.cloudSubTitle}} : {{this.cloudType}}
-        <br>Comment : {{this.cloudComment}}
-                </li>
-         {{/each}}
-       </ul></p>
+    &lt;li&gt;
+       {{this.cloudTitle}} {{this.cloudSubTitle}} : {{this.cloudType}}
+       &lt;br/&gt;Comment : {{this.cloudComment}}
+        &lt;/li&gt;
+        {{/each}}
+    &lt;/ul&gt;
+&lt;/template&gt;
+</code></pre>
 
-<p>Ici le code se corse un tout petit peu. Nous nous sommes notamment aidé d'un template helper, en l'occurrence ici le processus {{#each object}} … {{/each}} qui se propose d'appliquer ce qu'il contient pour chaque (each) « object » différent. Ainsi ici, à chaque « clouds » correspondra un </p>
-</li>
-<li> contenant le code inscrit. Jetons d'ailleurs un petit coup d'œil à ce code : il se propose de renvoyer successivement le titre et le sous-titre du cloud, puis, séparé par deux points, le champ de référence du cloud. Il va ensuite à la ligne pour présenter le commentaire éventuellement ajouté au cloud lors de son enregistrement. Ces informations seront ainsi données en liste pour chaque cloud enregistré.
-Notons ici que les 4 variables entre accolades (cloudTitle, cloudSubTitle, cloudType et cloudComment) correspondent aux 4 ids renseignés plus pour les sections correspondantes du formulaire. Cependant, ce n'est pas aux ids que les 4 variables font référence. Les 4 variables font en effet l'objet d'une définition qui leur est propre dans le code Javascript. C'est dans ce code qu'il faudra renseigner que ces variables se rapportent aux 4 champs correspondants du formulaire. Nous verrons ca très bientôt, attardons-nous avant pour finir sur le dernier template, intitulé « cloudSearch », et permettant la recherche des « clouds » en fonction d'un champ de référence.
+<p>Ici le code se corse un tout petit peu. Nous nous sommes notamment aidé d'un <em>template helper</em>, en l'occurrence ici le processus {{#each object}} … {{/each}} qui se propose d'appliquer ce qu'il contient pour chaque (each) « object » différent. Ainsi ici, à chaque « clouds » correspondra un &lt; li &gt; contenant le code inscrit. Jetons d'ailleurs un petit coup d'œil à ce code : il se propose de renvoyer successivement le titre et le sous-titre du cloud, puis, séparé par deux points, le champ de référence du cloud. Il va ensuite à la ligne pour présenter le commentaire éventuellement ajouté au cloud lors de son enregistrement. Ces informations seront ainsi données en liste pour chaque cloud enregistré.
+Notons ici que les 4 variables entre accolades (cloudTitle, cloudSubTitle, cloudType et cloudComment) correspondent aux 4 ids renseignés plus pour les sections correspondantes du formulaire. Cependant, ce n'est pas aux ids que les 4 variables font référence. Les 4 variables font en effet l'objet d'une définition qui leur est propre dans le code Javascript. C'est dans ce code qu'il faudra renseigner que ces variables se rapportent aux 4 champs correspondants du formulaire. Nous verrons ca très bientôt, attardons-nous avant pour finir sur le dernier template, intitulé « cloudSearch », et permettant la recherche des « clouds » en fonction d'un champ de référence.</p>
 
 <p>Ce dernier template est paradoxalement plus simple et plus compliqué à la fois. En effet, plus simple car il ne fait finalement qu'un mixe entre les deux autres templates : il se compose ainsi d'un formulaire afin de recueillir le champ de recherche, et d'une liste qui affiche les résultats. Mais également plus compliqué car il demande plus d'abstraction dans la mesure où, tel quel, et contrairement aux autres templates, il ne fait pas exactement ce qu'on lui demande. En effet, difficile de demander au template de seulement afficher les résultats correspondant au champ renseigné dans le même template. Il nous faudra donc, par la suite, contourner la difficulté, en passant notamment par jQuery afin de travailler directement sur l'affichage des items de la liste. Gardons à l'esprit qu'il nous suffit pour l'instant de définir dans le template l'affichage d'une section pour renseigner le champ recherché et l'affichage des « clouds » :</p>
 
-<p>
-         <p>SEARCH FOR A CLOUD</p>
-         CHOOSEfield1field2field3field4field5
-    <ul>
-        {{#each clouds}}
-         <li>
-                {{this.cloudTitle}} {{this.cloudSubTitle}}
-        <br>Comment : {{this.cloudComment}}
-                 </li>
-        {{/each}}
-    </ul></p>
+<pre><code>&lt;template name="cloudSearch"&gt;
+    &lt;form&gt;
+        &lt;p&gt;SEARCH FOR A CLOUD&lt;/p&gt;
+        &lt;select id="search-for-a-cloud" required&gt;
+            &lt;option value="0"&gt;CHOOSE&lt;/option&gt;
+            &lt;option value="field1"&gt;field1&lt;/option&gt;
+            &lt;option value="field2"&gt;field2&lt;/option&gt;
+            &lt;option value="field3"&gt;field3&lt;/option&gt;
+            &lt;option value="field4"&gt;field4&lt;/option&gt;
+            &lt;option value="field5"&gt;field5&lt;/option&gt;
+      &lt;/select&gt;
+   &lt;/form&gt;
+   &lt;ul&gt;
+       {{#each clouds}}
+   &lt;li&gt;
+           {{this.cloudTitle}} {{this.cloudSubTitle}}&lt;/span&gt;
+       &lt;br/&gt;Comment : {{this.cloudComment}}
+       &lt;/li&gt;
+       {{/each}}
+   &lt;/ul&gt;
+&lt;/template&gt;
+</code></pre>
 
 <p>Ce dernier template est ainsi sensiblement similaire aux deux autres : dans un premier temps un bouton select permet de sélectionner un des champs de référence, dans un second temps une liste affiche les résultats en présentant titre, sous-titre et commentaire (nul besoin du champ évidemment).</p>
 
@@ -209,13 +219,15 @@ Notons ici que les 4 variables entre accolades (cloudTitle, cloudSubTitle, cloud
 
 <p>Dans le fichier cloudAtlas.js, nous travaillerons pour l'instant uniquement du côté du serveur, c'est à dire au sein de la structure : </p>
 
-<p>if (Meteor.isClient) {</p>
+<pre><code>if (Meteor.isClient) {
 
-<p>}</p>
+}
+</code></pre>
 
 <p>L'unique ligne que nous ajoutons en dehors de cette structure est le nom de notre base de donnée qui recueillera tous nos clouds. Cette ligne est importante car elle crée pour notre application ce que Meteor appelle une collection. Tous nos « clouds » seront sauvegardés par Meteor (avec l'aide non négligeable des bases de données MongoDb) dans cette collection. C'est pourquoi il est important de la déclarer en premier (c'est avec elle que nous allons constamment interagir) et en dehors des conditions, afin que la collection soit définie à la fois côté client et côté serveur. Amorçons donc le fichier cloudAtlas.js par cette ligne :</p>
 
-<p>var Atlas = new Meteor.Collection('clouds');</p>
+<pre><code>var Atlas = new Meteor.Collection('clouds');
+</code></pre>
 
 <p>Elle signifie simplement que l'on crée une nouvelle collection qui s'intitule «Atlas» et qui est constituée de « clouds ».</p>
 
@@ -228,11 +240,12 @@ Notons ici que les 4 variables entre accolades (cloudTitle, cloudSubTitle, cloud
 <p>Le formulaire d'enregistrement des « clouds » comprend un bouton « submit » qui se traduit en Javascript sous la forme d'un événement. Cet événement, l'appui sur le bouton submit, déclenche plusieurs comportements qui doivent permettre à Meteor d'enregistrer les champs renseignés dans le formulaire.
 Meteor possède sa propre grammaire dont il est évidemment très intéressant et utile de prendre connaissance, disponible sur sa documentation sur son site. Dans Meteor, un événement se code ainsi :</p>
 
-<p>Template.cloudForm.events = {
+<pre><code>Template.cloudForm.events = {
     'submit' : function (e, tmpl) {
-        e.preventDefault();
-    }<br>
-};</p>
+    e.preventDefault();
+    }   
+};
+</code></pre>
 
 <p>La première ligne signifie que le template dont le nom est « cloudForm » attend un événement qu'il définit à la deuxième ligne comme provenant d'un bouton 'submit'. L'appuie sur un tel bouton déclenche alors une fonction anonyme qui prend deux arguments (e, pour événement, et tmpl, pour template). La première action de cette fonction (troisième ligne) est d'empêcher le fonctionnement par défaut de bouton submit, afin qu'il déclenche ce qu'on lui demande de déclencher.</p>
 
@@ -245,36 +258,39 @@ Meteor possède sa propre grammaire dont il est évidemment très intéressant e
 <li>ensuite on lui demande d'insérer ce « cloud » dans notre collection, afin de ne pas le perdre et qu'il soit bien conservé avec les autres ;</li>
 <li>on lui demande alors de vider les champs du formulaire pour laisser celui-ci aussi propre après utilisation qu'avant ;</li>
 <li>enfin, parce que l'utilisateur ne voit pas toute la machinerie, on lui envoie un jolie message pour lui dire que le « cloud » est bien ajouté.</li>
-</ul>
-<p>Allé hop, codons tout ca !</p>
+</ul><p>Allé hop, codons tout ca !</p>
 
 <p>L'enregistrement des clouds est un peu plus complexe que le reste, mais rien d'insurmontable. L'idée est de récupérer chacun des champs renseignés dans le formulaire pour les attribuer à un objet qu'il faudra définir afin qu'il soit créer... Javascript nous propose ainsi très facilement de créer un objet qui aura toujours les mêmes propriétés. Il suffit d'abord de déclarer cet objet (pour le créer, un peu comme la parole divine), puis de préciser quelles sont ses propriétés, puis... c'est tout !</p>
 
-<p>var newCloud = {
-    cloudTitle: tmpl.find("#cloudTitle").value,
-    cloudSubTitle: tmpl.find("#cloudSubTitle").value,
-    cloudType: tmpl.find("#cloudType").value,
-    cloudComment: tmpl.find("#cloudComment").value
-};</p>
+<pre><code>var newCloud = {
+   cloudTitle: tmpl.find("#cloudTitle").value,
+   cloudSubTitle: tmpl.find("#cloudSubTitle").value,
+   cloudType: tmpl.find("#cloudType").value,
+   cloudComment: tmpl.find("#cloudComment").value
+};
+</code></pre>
 
 <p>Notre objet s'appelle donc « newCloud » et il comprend 4 propriétés : cloudTitle, cloudSubTitle, cloudType et cloudComment. C'est à ces 4 propriétés que font référence les variables entre accolades dans le fichier HTML. En effet, pour chaque « clouds », nous avons vu que la helper function demande d'afficher tour à tour chacune de ces propriétés. Il est donc nécessaire, comme nous avons pu le souligner, de préciser ici à quoi se rapportent ces propriétés. Ainsi, pour la propriété cloudTitle par exemple, Meteor demande au template tmpl en question (celui définit avec le bouton 'submit', donc il s'agit bien du template du formulaire) de trouver (find) la balise ayant l'id (#) « cloudTile » et d'en récupérer la valeur (.value) qui correspond en réalité à ce que l'utilisateur y a inscrit. Pour le cas du bouton select, la valeur n'est autre que ce que l'utilisateur a choisi. Cet objet Javascript nous permet donc bien d'enregistrer tous les champs enregistrés par l'utilisateur et de les lier dans un cloud.</p>
 
 <p>Il ne reste plus qu'à insérer celui-ci dans notre collection : </p>
 
-<p>Atlas.insert(newCloud);</p>
+<pre><code>Atlas.insert(newCloud);
+</code></pre>
 
 <p>Et le tour est joué !</p>
 
 <p>Pour ce qui suit il est particulièrement pratique d'utiliser jQuery qui simplifiera notre code. Pour cela, il suffit d'ajouter le package jQuery à Meteor depuis le Terminal avec la commande :</p>
 
-<p>meteor add jquery</p>
+<pre><code>meteor add jquery
+</code></pre>
 
 <p>jQuery nous permet notamment d'aisément et rapidement effacer les valeurs des champs du formulaire. Prenons bien soin d'ajouter ces quelques lignes de jQuery après avoir enregistrer les valeurs renseignées !</p>
 
-<p>$('#cloudTitle').val('');<br>
-$('#cloudSubTitle').val('');<br>
+<pre><code>$('#cloudTitle').val('');   
+$('#cloudSubTitle').val('');    
 $('#cloudType').val('');
-$('#cloudComment').val('');</p>
+$('#cloudComment').val('');
+</code></pre>
 
 <p>Ces lignes de codes remplacent simplement les valeurs des champs du formulaire par une chaîne de caractères vide.</p>
 
@@ -282,26 +298,30 @@ $('#cloudComment').val('');</p>
 
 <p>Dans le HTML, ajoutons ces lignes dans le body :</p>
 
-<div>
-          Added !
-</div>
+<pre><code>&lt;div class="added"&gt;
+    Added !
+&lt;/div&gt;
+</code></pre>
 
 <p>Puis dans le Javascript, avant la fermeture de la fonction déclenchée par le submit :</p>
 
-<p>$('.added').fadeIn('slow', function() {}).delay(1000).fadeOut('slow', function() {});</p>
+<pre><code>$('.added').fadeIn('slow', function() {}).delay(1000).fadeOut('slow', function() {});
+</code></pre>
 
 <p>Le message s'affichera ainsi doucement puis s'effacera tout aussi doucement au bout d'une seconde.</p>
 
 <p>Et n'oublions pas enfin, au cas où ce n'est pas déjà fait, de bien fermer la fonction et le template :</p>
 
-<p>}<br>
-};</p>
+<pre><code>}   
+};
+</code></pre>
 
 <p>Le premier template est ainsi défini, ne reste plus qu'à s'attaquer aux deux autres, nettement plus rapide à définir !</p>
 
 <p>Pour le template intitulé « cloudAtlas », il nous faut quelque chose de très simple : on veut seulement afficher toute notre collection :</p>
 
-<p>Template.cloudAtlas.clouds = Atlas.find({});</p>
+<pre><code>Template.cloudAtlas.clouds = Atlas.find({});
+</code></pre>
 
 <p>Ici encore la grammaire de Meteor est particulière mais très claire. Le template « cloudAtlas » applique aux « clouds » qu'il contient une fonction : trouver tous les « clouds » contenus dans la collection « Atlas » et les afficher (return) tous. Il n'en faudra pas plus !</p>
 
@@ -309,43 +329,50 @@ $('#cloudComment').val('');</p>
 
 <p>D'abord, demandons à Meteor de dire au template de nous renvoyer tous les « clouds » de la collection :</p>
 
-<p>Template.cloudSearch.clouds = Clouds.find({});</p>
+<pre><code>Template.cloudSearch.clouds = Clouds.find({});
+</code></pre>
 
 <p>Puis, dans le CSS, masquons les par défaut :</p>
 
-<p>.item {
+<pre><code>.item {
     display:none;
-}</p>
+}
+</code></pre>
 
 <p>Cela fonctionne évidemment uniquement si la classe « item » a bien  été attribué à chaque cloud du template « cloudSearch ». Modifions donc cette partie du template de façon à ajouter la classe :</p>
 
-<ul>
-     {{#each clouds}}
-    <li>
-         {{this.cloudTitle}} {{this.cloudSubTitle}}<br>Comment : {{this.cloudComment}}
-    </li>
-     {{/each}}
-</ul>
+<pre><code>&lt;ul&gt;
+    {{#each clouds}}
+    &lt;li class="item"&gt;
+     {{this.cloudTitle}} {{this.cloudSubTitle}}&lt;br/&gt;Comment : {{this.cloudComment}}
+    &lt;/li&gt;
+    {{/each}}
+&lt;/ul&gt;
+</code></pre>
+
 <p>Il nous reste désormais à filtrer l'affichage de ces « clouds » en fonction du champ que l'on cherche. C'est ici qu'apparaît une petite subtilité. Chaque cloud est enregistré selon un champ référent unique. Quand on souhaitera rechercher par exemple le champ « field1 », nous aimerions qu'apparaissent uniquement les « clouds » avec ce champ, évidemment. Il nous suffit de considérer ce champ de référence comme une classe à part entière, afin que jQuery puisse agir dessus : ainsi, quand un utilisateur sélectionne un champ « field1 », l'application lui affichera tous les clouds avec la classe « field1 ». Il nous faut alors préciser 3 détails :</p>
 
 <p>1) Dans le HTML, modifions l'affichage des clouds en ajoutant à chaque item la classe correspondant à son champ de référence, c'est à dire « cloudType » :</p>
 
-<ul>
+<pre><code>&lt;ul&gt;
     {{#each clouds}}
-    <li>
-        {{this.cloudTitle}} {{this.cloudSubTitle}}
-        <br>Comment : {{this.cloudComment}}
-    </li>
+    &lt;li class="item {{this.cloudType}}"&gt;
+    {{this.cloudTitle}} {{this.cloudSubTitle}}&lt;/span&gt;
+    &lt;br/&gt;Comment : {{this.cloudComment}}
+    &lt;/li&gt;
     {{/each}}
-</ul>
+&lt;/ul&gt;
+</code></pre>
+
 <p>2) Dans le fichier Javascript, ajoutons les lignes de code jQuery nécessaires au comportement voulu. Celles-ci sont exécutées au moment où le DOM est chargé, ce qui se traduit dans Meteor par le démarrage du côté client :</p>
 
-<p>Meteor.startup(function() {
+<pre><code>Meteor.startup(function() {
     $("#search-for-a-cloud").change(function(){
     $('.item').hide();
     $('.'+$(this).val()).show();
     });
-});</p>
+});
+</code></pre>
 
 <p>Ces lignes précisent ainsi qu'au moment où une option du bouton select est choisie (c'est-à-dire au moment où un champ de recherche est sélectionné), jQuery récupère la valeur de ce bouton (correspondant, nous l'avons dit, au choix effectué par l'utilisateur, donc à la variable « cloudType » qui prend les valeurs field1, field2, field3, etc.) en lui ajoutant en entête un point lui permettant d'être considérée comme une classe. Cette classe est ainsi reconnue comme un objet jQuery sur lequel s'applique la fonction .show() : jQuery affichera tous les « clouds » qui ont pour classe le champ sélectionné par l'utilisateur. Au milieu de ce code s'insère par ailleurs une ligne afin de systématiquement tout cacher, afin de n'afficher que les « clouds » recherchés.</p>
 
@@ -360,21 +387,25 @@ $('#cloudComment').val('');</p>
 
 <p>Par ailleurs, dès les premières lignes, la documentation de Meteor nous apprend que par défaut une application Meteor comprend un package « autopublish » et un package « insecure » qui permettent à n'importe quel utilisateur de respectivement lire tout ce qui se trouve sur la base de donnée et écrire ce qu'il veut sur celle-ci. La première n'est pas très dangereuse pour nous, chaque cloud a de toute façon vocation a être publique. Cependant la deuxième peut-être plus dangereuse et nécessite qu'on la retire pour la production, par une simple commande dans le Terminal, une nouvelle fois :</p>
 
-<p>meteor remove insecure</p>
+<pre><code>meteor remove insecure
+</code></pre>
 
 <p>Enfin il ne nous reste plus qu'à lancer l'application pour ses premiers tests en dehors du localhost et afin qu'elle vienne à la rencontre de son public. Là encore Meteor nous simplifie vraiment la vie en proposant pour chaque application un service d'hébergement gratuit avec la simple commande de Terminal :</p>
 
-<p>meteor deploy CeQueJeVeux.meteor.com</p>
+<pre><code>meteor deploy CeQueJeVeux.meteor.com
+</code></pre>
 
 <p>Notre application est ainsi désormais disponible en ligne avec le sous-domaine de notre choix. </p>
 
 <p>Il est par ailleurs possible d'héberger l'application avec notre propre domaine :</p>
 
-<p>meteor deploy <a href="http://www.monsite.com">www.monsite.com</a></p>
+<pre><code>meteor deploy www.monsite.com
+</code></pre>
 
 <p>Ou encore de le télécharger sous forme d'archive pour l'insérer sur son propre site :</p>
 
-<p>meteor bundle cloudAtlas.tgz</p>
+<pre><code>meteor bundle cloudAtlas.tgz
+</code></pre>
 
 <p>Dans ce dernier cas il est important de noter que Meteor dépend de Node.js et de MongoDb. L'application fonctionnera donc uniquement sur un serveur supportant ces deux technologies.</p>
 
@@ -382,17 +413,25 @@ $('#cloudComment').val('');</p>
 
 <p><a href="https://github.com/tibomahe" class="user-mention">@tibomahe</a>
 tibomahe.com</p>
-</li>
-</ul>
-</div>
-</div>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/tibomahe">tibomahe</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/tibomahe/cloudAtlas-Meteor-App/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/tibomahe/cloudAtlas-Meteor-App/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/tibomahe/cloudAtlas-Meteor-App"></a> is maintained by <a href="https://github.com/tibomahe">tibomahe</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
+
+  
   </body>
 </html>
