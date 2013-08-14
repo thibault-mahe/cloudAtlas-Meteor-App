@@ -97,7 +97,7 @@ Pour Mac, il suffira de taper cette ligne de code :</p>
 <p>Précisons deux choses avant d'amorcer la structuration de notre application. Tout d'abord, nous avons déjà souligné que le développement d'une application avec Meteor se fait intégralement en Javascript (ce qui n'est pas entièrement vrai d'ailleurs puisque une application Meteor fonctionne comme un site Internet et nécessite donc une base de HTML et de CSS). C'est-à-dire que notre code Javascript sera, par défaut, à la fois exécuté du côté du navigateur et du côté serveur. Il sera donc nécessaire, bien souvent, de séparer ce qui doit être lu par l'un et ce qui doit être lu par l'autre. Pour séparer le code « client » du code « serveur », Meteor propose deux solutions :</p>
 
 <ul>
-<li>ce que l'on appelle les « booleans » <pre>Meteor.isClient</pre> et <pre>Meteor.isServer</pre>, qui est la solution par défaut ;</li>
+<li>ce que l'on appelle les « booleans » <samp>Meteor.isClient</samp> et Meteor.isServer, qui est la solution par défaut ;</li>
 <li>une séparation des dossiers /client et /serveur.</li>
 </ul><p>Puisque nous n'allons pas vraiment toucher au côté serveur, nous garderons ici la solution par défaut pour ne pas trop se compliquer. Le code complet disponible sur github vous montre cependant que la deuxième solution fonctionne évidemment très bien.</p>
 
