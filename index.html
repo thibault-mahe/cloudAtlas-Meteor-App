@@ -31,7 +31,7 @@
           <h2>
 <a name="tester-meteor-sous-mac-le-framework-des-applications-de-demain" class="anchor" href="#tester-meteor-sous-mac-le-framework-des-applications-de-demain"><span class="octicon octicon-link"></span></a>TESTER METEOR SOUS MAC, LE FRAMEWORK DES APPLICATIONS DE DEMAIN</h2>
 
-<p>Meteor est un framework Javascript assez récent permettant de développer des pages dynamiques et des applications en un rien de temps mais également en très peu de ligne de codes. Utilisant notamment Node.js, Meteor permet de développer son application uniquement en Javascript, côté client aussi bien, et c'est là la force du framework, que côté serveur. Une merveilleuse idée quand on constate le succès que connait aujourd'hui le langage, notamment simplifié et démocratisé par jQuery. Une merveilleuse idée surtout pour nous autres débutants qui apprécierons grandement de n'avoir qu'un seul langage de programmation à gérer, et à tenter de comprendre. </p>
+<p>Meteor est un framework (plus précisément un "stack") Javascript assez récent permettant de développer des pages dynamiques et des applications en un rien de temps mais également en très peu de ligne de codes. Utilisant notamment Node.js, Meteor permet de développer son application uniquement en Javascript, côté client aussi bien, et c'est là la force du framework, que côté serveur. Une merveilleuse idée quand on constate le succès que connait aujourd'hui le langage, notamment simplifié et démocratisé par jQuery. Une merveilleuse idée surtout pour nous autres débutants qui apprécierons grandement de n'avoir qu'un seul langage de programmation à manipuler, et à tenter de comprendre. </p>
 
 <p>Meteor gère par ailleurs pour nous la base de donnée nécessaire au développement du projet, en utilisant MongoDb, qu'il n'est pas utile de connaître, dans un premier temps. L'apprentissage de Meteor, et de son système de collections, nous en apprendra suffisamment sur son fonctionnement pour faire tourner notre première application.</p>
 
@@ -40,7 +40,7 @@
 <p>De nombreux exemples et tutoriaux sont d'ores-et-déjà disponibles sur Internet :</p>
 
 <ul>
-<li>le <a href="http://www.meteor.com/examples/leaderboard">site officiel de Meteor</a> propose quelques exemples intéressants comme des tableaux de classement de résultats mise à jour en temps réel, des jeux ou encore une « liste des choses à faire » (todo list) s'actualisant aisément ;</li>
+<li>le <a href="http://www.meteor.com/examples/leaderboard">site officiel de Meteor</a> propose quelques exemples intéressants comme des tableaux de classement de résultats mis à jour en temps réel, des jeux ou encore une « liste des choses à faire » (todo list) s'actualisant aisément ;</li>
 <li>Nettuts+ propose notamment <a href="http://net.tutsplus.com/tutorials/javascript-ajax/prototyping-with-meteor/">un tutoriel pour monter une application de chat</a>, ou encore un autre pour <a href="http://net.tutsplus.com/tutorials/javascript-ajax/whats-this-meteor-thing/">créer un "panier" pour un site d'e-commerce</a> s'actualisant en temps réel ;</li>
 <li>le site dédié discovermeteor.com propose plusieurs tutoriaux pour démarrer, notamment un reprenant <a href="http://www.discovermeteor.com/2013/01/30/getting-started-with-meteor/">la construction d'un petit forum</a>, ainsi qu'un autre <a href="http://www.discovermeteor.com/2013/02/20/a-look-at-a-meteor-template/">reprenant une partie du code de Telescope</a>, un des premiers sites web entièrement développés sous Meteor ;</li>
 <li>w3resource propose quant à lui un tutoriel pour <a href="http://www.w3resource.com/meteor/build-an-app-with-meteor.php">une application de partage de liens</a> ;</li>
@@ -48,9 +48,9 @@
 <li>Andrew Scala propose également <a href="http://andrewscala.com/meteor/">un tutoriel très détaillé</a> pour comprendre les principales caractéristiques du framework ;</li>
 <li>enfin, <a href="https://github.com/search?q=meteor&amp;ref=reposearch">Github</a> est rempli d'exemples d'applications pour tester Meteor.</li>
 </ul><p>Ce tour d'horizon non-exhaustif illustre l'abondance des articles de qualité accompagnant l'apprentissage de Meteor mais met également en relief l'absence de tutoriel pour les francophones non-anglophones – à l'exception peut-être de la <a href="http://www.etiennebalit.com/2013/04/meteor-b-a-ba-et-bonnes-pratiques/">très bonne traduction</a> de l'article d'Andrew Scala par Etienne Balit. 
-Cet article se propose donc d'expliquer succinctement, et dans la langue de Zinedine Zidane, comment créer sa première application avec le framework Meteor. L'application proposée est par ailleurs très distincte de ce qui est déjà proposé.</p>
+Cet article se propose donc d'expliquer aussi succinctement que possible, et dans la langue de Zinedine Zidane, comment créer sa première application avec Meteor. L'application proposée est par ailleurs très distincte de ce qui est déjà proposé.</p>
 
-<p>L'idée est de créer une application qui servirait à plusieurs usages différents. Pour monter en généralité, l'application prend le nom générique de cloudAtlas. Elle se divise en deux parties. Dans une partie il s'agit d'enregistrer un « cloud » selon deux champs (un titre et un sous-titre par exemple) et de le classer en renseignant un troisième champ de référence. Dans une autre partie, il s'agit de retrouver n'importe quel cloud enregistré selon ce troisième champ de référence. L'application permet ainsi de classer des objets selon divers prix par exemple, puis de retrouver pour chaque prix les objets enregistrés ; elle peut permettre également de classer les films actuellement à l'affiche selon un système de notation (par exemple, entre 1 et 5 étoiles), puis de retrouver pour chaque note les différents films correspondants ; elle permet encore de classer des interlocuteurs selon des spécialisations, et pour chaque spécialisation retrouver le ou les interlocuteurs de référence... Bref, les exemples sont nombreux d'utilisation de ce cloudAtlas. C'est parti !</p>
+<p>L'idée est de créer une application qui servirait à plusieurs usages différents. Pour monter en généralité, l'application prend le nom générique de cloudAtlas. Elle se divise en deux parties. Dans une partie il s'agit d'enregistrer un « cloud » selon deux champs (un titre et un sous-titre par exemple) et de le classer en renseignant un troisième champ de référence. Dans une autre partie, il s'agit de retrouver n'importe quel cloud enregistré selon ce troisième champ de référence. L'application permet ainsi de classer des objets selon divers prix par exemple, puis de retrouver pour chaque prix les objets enregistrés ; elle peut permettre également de classer les films actuellement à l'affiche selon un système de notation (par exemple, entre 1 et 5 étoiles), puis de retrouver pour chaque note les différents films correspondants ; elle permet encore de classer des interlocuteurs selon des spécialisations, et pour chaque spécialisation retrouver le ou les interlocuteurs de référence... Bref, les exemples d'utilisation de ce cloudAtlas sont nombreux. C'est parti !</p>
 
 <h2>
 <a name="installer-meteor-et-creer-lapplication" class="anchor" href="#installer-meteor-et-creer-lapplication"><span class="octicon octicon-link"></span></a>INSTALLER METEOR ET CREER L'APPLICATION</h2>
@@ -73,9 +73,9 @@ Pour Mac, il suffira de taper cette ligne de code :</p>
 <pre><code>meteor create cloudAtlas
 </code></pre>
 
-<p>// Quelques commandes bonnes à connaître pour naviguer via la fenêtre de Terminal :
-<em>ls</em> permet de faire la liste des dossiers et documents contenus dans le dossier dans lequel on se trouve
-<em>cd</em> permet de changer d'emplacement (change directory) en renseignant juste après l'emplacement dans lequel on souhaite se rendre. Pour revenir dans l'emplacement contenant celui dans lequel on se trouve, il suffira de taper <em>cd ..</em> //</p>
+<p><em>// Quelques commandes bonnes à connaître pour naviguer via la fenêtre de Terminal :</em>
+<em><strong>ls</strong> permet de faire la liste des dossiers et documents contenus dans le dossier dans lequel on se trouve</em>
+<em><strong>cd</strong> permet de changer d'emplacement (change directory) en renseignant juste après l'emplacement dans lequel on souhaite se rendre. Pour revenir dans l'emplacement contenant celui dans lequel on se trouve, il suffira de taper <strong>cd ..</strong> //</em></p>
 
 <p>Ainsi, pour démarrer notre application, il nous suffit de nous y rendre tout d'abord :</p>
 
