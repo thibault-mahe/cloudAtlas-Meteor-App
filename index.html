@@ -31,27 +31,32 @@
         <hr>
 
         <section id="main_content">
-          <p>TESTER METEOR SOUS MAC, LE FRAMEWORK DES APPLICATIONS DE DEMAIN</p>
+          <h1>
+<a name="tester-meteor-sous-mac-le-framework-des-applications-de-demain" class="anchor" href="#tester-meteor-sous-mac-le-framework-des-applications-de-demain"><span class="octicon octicon-link"></span></a>TESTER METEOR SOUS MAC, LE FRAMEWORK DES APPLICATIONS DE DEMAIN</h1>
 
-<p>Meteor est un framework Javascript assez récent permettant de développer des pages dynamiques et des applications en un rien de temps mais également en très peu de ligne de codes. Utilisant notamment Node.js, Meteor permet de développer son application uniquement en Javascript, côté client aussi bien, et c'est là la force du framework, que côté serveur. Une merveilleuse idée quand on constate le succès que connait aujourd'hui le langage, notamment simplifié et démocratisé par jQuery. Une merveilleuse idée surtout pour nous autres débutants qui apprécierons grandement de n'avoir qu'un seul langage de programmation à gérer, et à tenter de comprendre. 
-Meteor gère par ailleurs pour nous la base de donnée nécessaire au développement du projet, en utilisant MongoDb, qu'il n'est pas utile de connaître, dans un premier temps. L'apprentissage de Meteor, et de son système de collections, nous en apprendra suffisamment sur son fonctionnement pour faire tourner notre première application.
-Enfin, notons sans trop entrer dans la complexité du framework que Meteor tient son succès à sa réactivité : toute modification d'une donnée sera automatiquement et en temps réel prise en compte par toutes les applications et tous les utilisateurs, y compris du côté des interfaces utilisateurs, sans avoir à actualiser sa page. C'est une caractéristique éminemment essentielle pour des applications de discussion par exemple, de partage de donnée, de plateforme de collaboration en temps réel ou encore de liste à actualiser. Mais pas seulement, le champ des possibles reste grand ouvert !</p>
+<p>Meteor est un framework Javascript assez récent permettant de développer des pages dynamiques et des applications en un rien de temps mais également en très peu de ligne de codes. Utilisant notamment Node.js, Meteor permet de développer son application uniquement en Javascript, côté client aussi bien, et c'est là la force du framework, que côté serveur. Une merveilleuse idée quand on constate le succès que connait aujourd'hui le langage, notamment simplifié et démocratisé par jQuery. Une merveilleuse idée surtout pour nous autres débutants qui apprécierons grandement de n'avoir qu'un seul langage de programmation à gérer, et à tenter de comprendre. </p>
 
-<p>De nombreux exemples et tutoriaux sont d'ores-et-déjà disponibles sur Internet :
-le site officiel de Meteor propose quelques exemples intéressants comme des tableaux de classement de résultats mise à jour en temps réel, des jeux ou encore une « liste des choses à faire » (todo list) s'actualisant aisément ;
-Nettuts+ propose notamment un tutoriel pour monter une application de chat, ou encore un autre pour créer un « panier » pour un site d'e-commerce s'actualisant en temps réel ;
-le site dédié discovermeteor.com propose plusieurs tutoriaux pour démarrer, notamment un reprenant la construction d'un petit forum, ainsi qu'un autre reprenant une partie du code de Telescope, un des premiers sites web entièrement développés sous Meteor ;
-w3resource propose quant à lui un tutoriel pour une application de partage de liens ;
-Sacha Grief propose sur SmashingMag un tutoriel très complet pour une application de partage de contact Twitter prenant en compte une connexion via son compte Twitter ;
-Andrew Scala propose également un tutoriel très détaillé pour comprendre les principales caractéristiques du framework ;
-enfin, Github est rempli d'exemples d'applications pour tester Meteor.</p>
+<p>Meteor gère par ailleurs pour nous la base de donnée nécessaire au développement du projet, en utilisant MongoDb, qu'il n'est pas utile de connaître, dans un premier temps. L'apprentissage de Meteor, et de son système de collections, nous en apprendra suffisamment sur son fonctionnement pour faire tourner notre première application.</p>
 
-<p>Ce tour d'horizon non-exhaustif illustre l'abondance des articles de qualité accompagnant l'apprentissage de Meteor mais met également en relief l'absence de tutoriel pour les francophones non-anglophones – à l'exception peut-être de la très bonne traduction de l'article d'Andrew Scala par Etienne Balit. 
+<p>Enfin, notons sans trop entrer dans la complexité du framework que Meteor tient son succès à sa réactivité : toute modification d'une donnée sera automatiquement et en temps réel prise en compte par toutes les applications et tous les utilisateurs, y compris du côté des interfaces utilisateurs, sans avoir à actualiser sa page. C'est une caractéristique éminemment essentielle pour des applications de discussion par exemple, de partage de donnée, de plateforme de collaboration en temps réel ou encore de liste à actualiser. Mais pas seulement, le champ des possibles reste grand ouvert !</p>
+
+<p>De nombreux exemples et tutoriaux sont d'ores-et-déjà disponibles sur Internet :</p>
+
+<ul>
+<li>le site officiel de Meteor propose quelques exemples intéressants comme des tableaux de classement de résultats mise à jour en temps réel, des jeux ou encore une « liste des choses à faire » (todo list) s'actualisant aisément ;</li>
+<li>Nettuts+ propose notamment un tutoriel pour monter une application de chat, ou encore un autre pour créer un « panier » pour un site d'e-commerce s'actualisant en temps réel ;</li>
+<li>le site dédié discovermeteor.com propose plusieurs tutoriaux pour démarrer, notamment un reprenant la construction d'un petit forum, ainsi qu'un autre reprenant une partie du code de Telescope, un des premiers sites web entièrement développés sous Meteor ;</li>
+<li>w3resource propose quant à lui un tutoriel pour une application de partage de liens ;</li>
+<li>Sacha Grief propose sur SmashingMag un tutoriel très complet pour une application de partage de contact Twitter prenant en compte une connexion via son compte Twitter ;</li>
+<li>Andrew Scala propose également un tutoriel très détaillé pour comprendre les principales caractéristiques du framework ;</li>
+<li>enfin, Github est rempli d'exemples d'applications pour tester Meteor.</li>
+</ul><p>Ce tour d'horizon non-exhaustif illustre l'abondance des articles de qualité accompagnant l'apprentissage de Meteor mais met également en relief l'absence de tutoriel pour les francophones non-anglophones – à l'exception peut-être de la très bonne traduction de l'article d'Andrew Scala par Etienne Balit. 
 Cet article se propose donc d'expliquer succinctement, et dans la langue de Zinedine Zidane, comment créer sa première application avec le framework Meteor. L'application proposée est par ailleurs très distincte de ce qui est déjà proposé. Le code complet est disponible ici. </p>
 
 <p>L'idée est de créer une application qui servirait à plusieurs usages différents. Pour monter en généralité, l'application prend le nom générique de cloudAtlas. Elle se divise en deux parties. Dans une partie il s'agit d'enregistrer un « cloud » selon deux champs (un titre et un sous-titre par exemple) et de le classer en renseignant un troisième champ de référence. Dans une autre partie, il s'agit de retrouver n'importe quel cloud enregistré selon ce troisième champ de référence. L'application permet ainsi de classer des objets selon divers prix par exemple, puis de retrouver pour chaque prix les objets enregistrés ; elle peut permettre également de classer les films actuellement à l'affiche selon un système de notation (par exemple, entre 1 et 5 étoiles), puis de retrouver pour chaque note les différents films correspondants ; elle permet encore de classer des interlocuteurs selon des spécialisations, et pour chaque spécialisation retrouver le ou les interlocuteurs de référence... Bref, les exemples sont nombreux d'utilisation de ce cloudAtlas. C'est parti !</p>
 
-<p>INSTALLER METEOR ET CREER L'APPLICATION</p>
+<h2>
+<a name="installer-meteor-et-creer-lapplication" class="anchor" href="#installer-meteor-et-creer-lapplication"><span class="octicon octicon-link"></span></a>INSTALLER METEOR ET CREER L'APPLICATION</h2>
 
 <p>L'installation s'effectue à partie du Terminal, mais diffère selon le système d'exploitation.
 Pour Mac, il suffira de taper cette ligne de code :</p>
@@ -66,9 +71,9 @@ Pour Mac, il suffira de taper cette ligne de code :</p>
 et en l'occurrence ici :
 meteor create cloudAtlas</p>
 
-<p>Quelques commandes bonnes à connaître pour naviguer via la fenêtre de Terminal :
-ls permet de faire la liste des dossiers et documents contenus dans le dossier dans lequel on se trouve
-cd permet de changer d'emplacement (change directory) en renseignant juste après l'emplacement dans lequel on souhaite se rendre. Pour revenir dans l'emplacement contenant celui dans lequel on se trouve, il suffira de taper cd ..</p>
+<p>// Quelques commandes bonnes à connaître pour naviguer via la fenêtre de Terminal :
+<em>ls</em> permet de faire la liste des dossiers et documents contenus dans le dossier dans lequel on se trouve
+<em>cd</em> permet de changer d'emplacement (change directory) en renseignant juste après l'emplacement dans lequel on souhaite se rendre. Pour revenir dans l'emplacement contenant celui dans lequel on se trouve, il suffira de taper <em>cd ..</em> //</p>
 
 <p>Ainsi, pour démarrer notre application, il nous suffit de nous y rendre tout d'abord :</p>
 
@@ -84,12 +89,14 @@ cd permet de changer d'emplacement (change directory) en renseignant juste aprè
 
 <p>CREER LA STRUCTURE DE MON APPLICATION</p>
 
-<p>Précisons deux choses avant d'amorcer la structuration de notre application. Tout d'abord, nous avons déjà souligné que le développement d'une application avec Meteor se fait entièrement en Javascript (ce qui n'est pas entièrement vrai d'ailleurs puisque une application Meteor fonctionne comme un site Internet et nécessite donc une base de HTML et de CSS). C'est-à-dire que notre code Javascript sera, par défaut, à la fois exécuté du côté du navigateur et du côté serveur. Il sera don c nécessaire, bien souvent, de séparer ce qui doit être lu par l'un et ce qui doit être lu par l'autre. Pour séparer le code « client » du code « serveur », Meteor propose deux solutions :
-ce que l'on appelle les « booleans » Meteor.isClient et Meteor.isServer, qui est la solution par défaut ;
-une séparation des dossiers /client et /serveur.</p>
+<p>Précisons deux choses avant d'amorcer la structuration de notre application. Tout d'abord, nous avons déjà souligné que le développement d'une application avec Meteor se fait entièrement en Javascript (ce qui n'est pas entièrement vrai d'ailleurs puisque une application Meteor fonctionne comme un site Internet et nécessite donc une base de HTML et de CSS). C'est-à-dire que notre code Javascript sera, par défaut, à la fois exécuté du côté du navigateur et du côté serveur. Il sera don c nécessaire, bien souvent, de séparer ce qui doit être lu par l'un et ce qui doit être lu par l'autre. Pour séparer le code « client » du code « serveur », Meteor propose deux solutions :</p>
 
-<p>Puisque nous n'allons pas vraiment toucher au côté serveur, nous garderons ici la solution par défaut pour ne pas trop se compliquer. Le code complet disponible sur github vous montre cependant que la deuxième solution fonctionne évidemment très bien.
-Un boolean est comme une condition (d'où la présence du if d'ailleurs), qui renvoi un accord quand elle est remplie, ou un désaccord quand elle ne l'est pas. Ce que signifie donc Meteor.isClient c'est que ce qui suit (entre les premières accolades) ne doit être exécuté que du côté client (la condition), et évidemment  Meteor.isServer que du côté serveur. La structure du fichier .js ressemble donc pour l'instant à ceci :</p>
+<ul>
+<li>ce que l'on appelle les « booleans » Meteor.isClient et Meteor.isServer, qui est la solution par défaut ;</li>
+<li>une séparation des dossiers /client et /serveur.</li>
+</ul><p>Puisque nous n'allons pas vraiment toucher au côté serveur, nous garderons ici la solution par défaut pour ne pas trop se compliquer. Le code complet disponible sur github vous montre cependant que la deuxième solution fonctionne évidemment très bien.</p>
+
+<p>Un boolean est comme une condition (d'où la présence du if d'ailleurs), qui renvoi un accord quand elle est remplie, ou un désaccord quand elle ne l'est pas. Ce que signifie donc Meteor.isClient c'est que ce qui suit (entre les premières accolades) ne doit être exécuté que du côté client (la condition), et évidemment  Meteor.isServer que du côté serveur. La structure du fichier .js ressemble donc pour l'instant à ceci :</p>
 
 <p>if (Meteor.isClient) {</p>
 
@@ -99,8 +106,9 @@ Un boolean est comme une condition (d'où la présence du if d'ailleurs), qui re
 
 <p>}</p>
 
-<p>Le code qui n'est présent dans aucune des deux conditions est exécuté des deux côtés. Pour notre part, nous ne mettrons principalement notre code que dans la première accolade, du côté client donc. Mais nous y reviendrons plus tard, car un deuxième point important est à noter.
-Pour générer du contenu dynamiquement, Meteor utilise le système de template Handlebars qui permet de désigner les parties variables de notre code par des double accolades ouvrantes et fermantes {{   }} . Rien de très difficile ici, il suffira seulement de coder une page HTML toute simple en ajoutant ces marqueurs pour les parties dynamiques. Chaque variable étant définie par un template lui signifiant ce qu'elle doit afficher, il sera par ailleurs nécessaire de préciser dans le même code ces templates. Ainsi, notre page HTML comprendra trois parties : le head, le body, et les templates.</p>
+<p>Le code qui n'est présent dans aucune des deux conditions est exécuté des deux côtés. Pour notre part, nous ne mettrons principalement notre code que dans la première accolade, du côté client donc. Mais nous y reviendrons plus tard, car un deuxième point important est à noter.</p>
+
+<p>Pour générer du contenu dynamiquement, Meteor utilise le système de template Handlebars qui permet de désigner les parties variables de notre code par des double accolades ouvrantes et fermantes {{   }} . Rien de très difficile ici, il suffira seulement de coder une page HTML toute simple en ajoutant ces marqueurs pour les parties dynamiques. Chaque variable étant définie par un template lui signifiant ce qu'elle doit afficher, il sera par ailleurs nécessaire de préciser dans le même code ces templates. Ainsi, notre page HTML comprendra trois parties : le head, le body, et les templates.</p>
 
 <p>Nous souhaitons également que notre application se structure en trois parties :
 1.une partie où l'on enregistre nos items, nos « clouds » donc, via un formulaire nous permettant de renseigner les trois champs mentionnés plus haut ;
@@ -130,7 +138,8 @@ Pour générer du contenu dynamiquement, Meteor utilise le système de template 
 
 
 <p>Les trois parties sont intégrées dans une </p><div> englobante (« app ») qui facilitera la manipulation par la suite avec le CSS. L'application commence par un titre sobrement appelé « CloudAtlas ». Le code de chaque partie est à préciser : il s'agit tout simplement de trois <div> possédant chacune un id distinctif afin de pouvoir les manipuler plus facilement et désignant la position des parties. Chaque partie ne contient qu'une variable mise entre double accolades et désignant chacune le template à laquelle elle se réfère. Bien évidemment, chacun de ces 3 templates est à définir directement après la fermeture du body.
-L'ordre est indifférent. Suivons l'ordre logique du processus et commençons par celui du milieu, c'est-à-dire le formulaire de création de « clouds », dont le template est intitulé ci-dessus « cloudForm ». La balise pour définir un template est tout simplement la balise  et celle, plus connue, pour un formulaire est . On obtient ainsi ceci :
+
+<p>L'ordre est indifférent. Suivons l'ordre logique du processus et commençons par celui du milieu, c'est-à-dire le formulaire de création de « clouds », dont le template est intitulé ci-dessus « cloudForm ». La balise pour définir un template est tout simplement la balise  et celle, plus connue, pour un formulaire est </p>. On obtient ainsi ceci :
 
 <p>
         <p>REGISTER A CLOUD</p>
@@ -178,7 +187,8 @@ Notons ici que les 4 variables entre accolades (cloudTitle, cloudSubTitle, cloud
 
 <p>Le fichier HTML est pour l'instant complet, voyons ce qui se cache derrière !</p>
 
-<p>BEHIND THE SCENE </p>
+<h2>
+<a name="behind-the-scene" class="anchor" href="#behind-the-scene"><span class="octicon octicon-link"></span></a>BEHIND THE SCENE</h2>
 
 <p>Dans le fichier cloudAtlas.js, nous travaillerons pour l'instant uniquement du côté du serveur, c'est à dire au sein de la structure : </p>
 
@@ -209,8 +219,9 @@ Meteor possède sa propre grammaire dont il est évidemment très intéressant e
 
 <p>La première ligne signifie que le template dont le nom est « cloudForm » attend un événement qu'il définit à la deuxième ligne comme provenant d'un bouton 'submit'. L'appuie sur un tel bouton déclenche alors une fonction anonyme qui prend deux arguments (e, pour événement, et tmpl, pour template). La première action de cette fonction (troisième ligne) est d'empêcher le fonctionnement par défaut de bouton submit, afin qu'il déclenche ce qu'on lui demande de déclencher.</p>
 
-<p>Ce qu'on lui demande de déclencher est justement à préciser juste après, c'est-à-dire avant les deux dernières accolades fermantes (l'avant dernière ferme la fonction déclenchée par le bouton submit, et la dernière l'instruction déclenchée par l'événement).
-Et que lui demande-t-on ? Pleins de choses ! Dans l'ordre :</p>
+<p>Ce qu'on lui demande de déclencher est justement à préciser juste après, c'est-à-dire avant les deux dernières accolades fermantes (l'avant dernière ferme la fonction déclenchée par le bouton submit, et la dernière l'instruction déclenchée par l'événement).</p>
+
+<p>Et que lui demande-t-on ? Pleins de choses ! Dans l'ordre :</p>
 
 <ul>
 <li>d'abord on demande à l'application de créer un nouveau « cloud » en lui attribuant les renseignements apportés dans chacun des 4 champs ;</li>
@@ -235,8 +246,9 @@ Et que lui demande-t-on ? Pleins de choses ! Dans l'ordre :</p>
 
 <p>Atlas.insert(newCloud);</p>
 
-<p>Et le tour est joué !
-Pour ce qui suit il est particulièrement pratique d'utiliser jQuery qui simplifiera notre code. Pour cela, il suffit d'ajouter le package jQuery à Meteor depuis le Terminal avec la commande :</p>
+<p>Et le tour est joué !</p>
+
+<p>Pour ce qui suit il est particulièrement pratique d'utiliser jQuery qui simplifiera notre code. Pour cela, il suffit d'ajouter le package jQuery à Meteor depuis le Terminal avec la commande :</p>
 
 <p>meteor add jquery</p>
 
@@ -249,8 +261,9 @@ $('#cloudComment').val('');</p>
 
 <p>Ces lignes de codes remplacent simplement les valeurs des champs du formulaire par une chaîne de caractères vide.</p>
 
-<p>Enfin, il ne nous reste plus qu'à indiquer à l'utilisateur que son « cloud » a bien été enregistré. Faisons les choses bien en évitant de passer par les fenêtre d'alerte rudimentaire de Javascript. Écrivons plutôt directement dans le HTML un message que l'on cachera par défaut et que l'on affichera à la fin du processus de création du « cloud » afin de conclure celui-ci par une validation envoyée à l'utilisateur.
-Dans le HTML, ajoutons ces lignes dans le body :</p>
+<p>Enfin, il ne nous reste plus qu'à indiquer à l'utilisateur que son « cloud » a bien été enregistré. Faisons les choses bien en évitant de passer par les fenêtres d'alerte rudimentaires de Javascript. Écrivons plutôt directement dans le HTML un message que l'on cachera par défaut et que l'on affichera à la fin du processus de création du « cloud » afin de conclure celui-ci par une validation envoyée à l'utilisateur.</p>
+
+<p>Dans le HTML, ajoutons ces lignes dans le body :</p>
 
 <div>
           Added !
@@ -275,8 +288,9 @@ Dans le HTML, ajoutons ces lignes dans le body :</p>
 
 <p>Ici encore la grammaire de Meteor est particulière mais très claire. Le template « cloudAtlas » applique aux « clouds » qu'il contient une fonction : trouver tous les « clouds » contenus dans la collection « Atlas » et les afficher (return) tous. Il n'en faudra pas plus !</p>
 
-<p>Enfin, la dernier template demandera une petite astuce supplémentaire. Comme nous le disions, nous demandons à ce template d'afficher également tous les « clouds », mais de masquer tous ceux dont le champ de référence ne nous intéresse pas. Plus précisément, nous ferons exactement l'inverse : par défaut tous les « clouds » seront cachés, et nous allons demander à l'application, grâce à jQuery, d'afficher uniquement ceux qui nous intéressent. Voyons ca de plus près.
-D'abord, demandons à Meteor de dire au template de nous renvoyer tous les « clouds » de la collection :</p>
+<p>Enfin, la dernier template demandera une petite astuce supplémentaire. Comme nous le disions, nous demandons à ce template d'afficher également tous les « clouds », mais de masquer tous ceux dont le champ de référence ne nous intéresse pas. Plus précisément, nous ferons exactement l'inverse : par défaut tous les « clouds » seront cachés, et nous allons demander à l'application, grâce à jQuery, d'afficher uniquement ceux qui nous intéressent. Voyons ca de plus près.</p>
+
+<p>D'abord, demandons à Meteor de dire au template de nous renvoyer tous les « clouds » de la collection :</p>
 
 <p>Template.cloudSearch.clouds = Clouds.find({});</p>
 
@@ -314,17 +328,18 @@ D'abord, demandons à Meteor de dire au template de nous renvoyer tous les « c
     $('.item').hide();
     $('.'+$(this).val()).show();
     });
-    });</p>
+});</p>
 
 <p>Ces lignes précisent ainsi qu'au moment où une option du bouton select est choisie (c'est-à-dire au moment où un champ de recherche est sélectionné), jQuery récupère la valeur de ce bouton (correspondant, nous l'avons dit, au choix effectué par l'utilisateur, donc à la variable « cloudType » qui prend les valeurs field1, field2, field3, etc.) en lui ajoutant en entête un point lui permettant d'être considérée comme une classe. Cette classe est ainsi reconnue comme un objet jQuery sur lequel s'applique la fonction .show() : jQuery affichera tous les « clouds » qui ont pour classe le champ sélectionné par l'utilisateur. Au milieu de ce code s'insère par ailleurs une ligne afin de systématiquement tout cacher, afin de n'afficher que les « clouds » recherchés.</p>
 
 <p>3) Un dernier point important porte sur la façon de nommer ces champs. Puisque ces champs sont transformés en classes, il est important qu'ils ne comprennent pas d'espace. Mieux vaut donc préférer « field1 », « field-1 » ou encore « field_1 » par exemple à « field 1 » qui ne fonctionnera pas.</p>
 
-<p>FINALISER SON APPLICATION</p>
+<h2>
+<a name="finaliser-son-application" class="anchor" href="#finaliser-son-application"><span class="octicon octicon-link"></span></a>FINALISER SON APPLICATION</h2>
 
 <p>Nous ne nous attarderons pas là-dessus ici mais il ne faut pas oublier d'habiller un peu son application en travaillant sur le fichier CSS de la même manière que pour un site web.</p>
 
-<p>Woooo ca pique les yeux !</p>
+<p><img src="http://tibomahe.com/storage/aper%C3%A7u_cloudatlas.png" alt="Aperçu cloudAtlas"><em>Woooo ca pique les yeux !</em></p>
 
 <p>Par ailleurs, dès les premières lignes, la documentation de Meteor nous apprend que par défaut une application Meteor comprend un package « autopublish » et un package « insecure » qui permettent à n'importe quel utilisateur de respectivement lire tout ce qui se trouve sur la base de donnée et écrire ce qu'il veut sur celle-ci. La première n'est pas très dangereuse pour nous, chaque cloud a de toute façon vocation a être publique. Cependant la deuxième peut-être plus dangereuse et nécessite qu'on la retire pour la production, par une simple commande dans le Terminal, une nouvelle fois :</p>
 
