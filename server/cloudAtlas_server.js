@@ -1,14 +1,16 @@
 var Atlas = new Meteor.Collection('clouds');
 
 Meteor.startup(function () {
-   	//Clouds.remove({}); 
-
-   	Atlas.allow({
+	//Remove all clouds
+	//Clouds.remove({}); 
+	
+	//Insert / Remove specific cloud
+	Atlas.allow({
   		insert: function (userId, doc) {
-    		return true;
+    			return true;
   		},
   		remove: function (userId, doc) {
-    		return true;
+    			return true;
   		}
 	});
  });
