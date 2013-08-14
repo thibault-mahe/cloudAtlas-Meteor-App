@@ -89,15 +89,15 @@ Pour Mac, il suffira de taper cette ligne de code :</p>
 
 <p>Une fois l'application lancée, elle sera accessible à une adresse local depuis n'importe quel navigateur de votre poste : http://localhost:3000/ . On y trouvera par défaut une page « Hello World ! » vous souhaitant la bienvenue.</p>
 
-<p>Les différents fichiers de code se trouveront quant à eux dans le dossier portant le nom de votre application. Dans le fichier cloudAtlas, situé dans le dossier Utilisateurs, on retrouve ainsi avec 3 documents : cloudAtlas.js, cloudAtlas.html et cloudAtlas.css.</p>
+<p>Les différents fichiers de code se trouveront quant à eux dans le dossier portant le nom de votre application. Dans le fichier cloudAtlas, situé dans le dossier Utilisateurs, on se retrouve ainsi avec 3 documents : cloudAtlas.js, cloudAtlas.html et cloudAtlas.css.</p>
 
 <h2>
 <a name="creer-la-structure-de-mon-application" class="anchor" href="#creer-la-structure-de-mon-application"><span class="octicon octicon-link"></span></a>CREER LA STRUCTURE DE MON APPLICATION</h2>
 
-<p>Précisons deux choses avant d'amorcer la structuration de notre application. Tout d'abord, nous avons déjà souligné que le développement d'une application avec Meteor se fait entièrement en Javascript (ce qui n'est pas entièrement vrai d'ailleurs puisque une application Meteor fonctionne comme un site Internet et nécessite donc une base de HTML et de CSS). C'est-à-dire que notre code Javascript sera, par défaut, à la fois exécuté du côté du navigateur et du côté serveur. Il sera don c nécessaire, bien souvent, de séparer ce qui doit être lu par l'un et ce qui doit être lu par l'autre. Pour séparer le code « client » du code « serveur », Meteor propose deux solutions :</p>
+<p>Précisons deux choses avant d'amorcer la structuration de notre application. Tout d'abord, nous avons déjà souligné que le développement d'une application avec Meteor se fait intégralement en Javascript (ce qui n'est pas entièrement vrai d'ailleurs puisque une application Meteor fonctionne comme un site Internet et nécessite donc une base de HTML et de CSS). C'est-à-dire que notre code Javascript sera, par défaut, à la fois exécuté du côté du navigateur et du côté serveur. Il sera donc nécessaire, bien souvent, de séparer ce qui doit être lu par l'un et ce qui doit être lu par l'autre. Pour séparer le code « client » du code « serveur », Meteor propose deux solutions :</p>
 
 <ul>
-<li>ce que l'on appelle les « booleans » Meteor.isClient et Meteor.isServer, qui est la solution par défaut ;</li>
+<li>ce que l'on appelle les « booleans » <pre>Meteor.isClient</pre> et <pre>Meteor.isServer</pre>, qui est la solution par défaut ;</li>
 <li>une séparation des dossiers /client et /serveur.</li>
 </ul><p>Puisque nous n'allons pas vraiment toucher au côté serveur, nous garderons ici la solution par défaut pour ne pas trop se compliquer. Le code complet disponible sur github vous montre cependant que la deuxième solution fonctionne évidemment très bien.</p>
 
