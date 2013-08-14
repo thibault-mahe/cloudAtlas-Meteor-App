@@ -5,7 +5,7 @@ Template.cloudAtlas.clouds = Atlas.find({});
 
 Template.cloudAtlas.events = {
   	'click .remove': function () {
-    	Atlas.remove(this._id);
+    		Atlas.remove(this._id);
   	}
 };
 	
