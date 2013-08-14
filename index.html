@@ -40,15 +40,15 @@
 <p>De nombreux exemples et tutoriaux sont d'ores-et-déjà disponibles sur Internet :</p>
 
 <ul>
-<li>le site officiel de Meteor propose quelques exemples intéressants comme des tableaux de classement de résultats mise à jour en temps réel, des jeux ou encore une « liste des choses à faire » (todo list) s'actualisant aisément ;</li>
-<li>Nettuts+ propose notamment un tutoriel pour monter une application de chat, ou encore un autre pour créer un « panier » pour un site d'e-commerce s'actualisant en temps réel ;</li>
-<li>le site dédié discovermeteor.com propose plusieurs tutoriaux pour démarrer, notamment un reprenant la construction d'un petit forum, ainsi qu'un autre reprenant une partie du code de Telescope, un des premiers sites web entièrement développés sous Meteor ;</li>
-<li>w3resource propose quant à lui un tutoriel pour une application de partage de liens ;</li>
-<li>Sacha Grief propose sur SmashingMag un tutoriel très complet pour une application de partage de contact Twitter prenant en compte une connexion via son compte Twitter ;</li>
-<li>Andrew Scala propose également un tutoriel très détaillé pour comprendre les principales caractéristiques du framework ;</li>
-<li>enfin, Github est rempli d'exemples d'applications pour tester Meteor.</li>
-</ul><p>Ce tour d'horizon non-exhaustif illustre l'abondance des articles de qualité accompagnant l'apprentissage de Meteor mais met également en relief l'absence de tutoriel pour les francophones non-anglophones – à l'exception peut-être de la très bonne traduction de l'article d'Andrew Scala par Etienne Balit. 
-Cet article se propose donc d'expliquer succinctement, et dans la langue de Zinedine Zidane, comment créer sa première application avec le framework Meteor. L'application proposée est par ailleurs très distincte de ce qui est déjà proposé. Le code complet est disponible ici. </p>
+<li>le <a href="http://www.meteor.com/examples/leaderboard">site officiel de Meteor</a> propose quelques exemples intéressants comme des tableaux de classement de résultats mise à jour en temps réel, des jeux ou encore une « liste des choses à faire » (todo list) s'actualisant aisément ;</li>
+<li>Nettuts+ propose notamment <a href="http://net.tutsplus.com/tutorials/javascript-ajax/prototyping-with-meteor/">un tutoriel pour monter une application de chat</a>, ou encore un autre pour <a href="http://net.tutsplus.com/tutorials/javascript-ajax/whats-this-meteor-thing/">créer un "panier" pour un site d'e-commerce</a> s'actualisant en temps réel ;</li>
+<li>le site dédié discovermeteor.com propose plusieurs tutoriaux pour démarrer, notamment un reprenant <a href="http://www.discovermeteor.com/2013/01/30/getting-started-with-meteor/">la construction d'un petit forum</a>, ainsi qu'un autre <a href="http://www.discovermeteor.com/2013/02/20/a-look-at-a-meteor-template/">reprenant une partie du code de Telescope</a>, un des premiers sites web entièrement développés sous Meteor ;</li>
+<li>w3resource propose quant à lui un tutoriel pour <a href="http://www.w3resource.com/meteor/build-an-app-with-meteor.php">une application de partage de liens</a> ;</li>
+<li>Sacha Grief propose sur SmashingMag <a href="http://www.smashingmagazine.com/2013/06/13/build-app-45-minutes-meteor/">un tutoriel très complet</a> pour une application de partage de contact Twitter prenant en compte une connexion via son compte Twitter ;</li>
+<li>Andrew Scala propose également <a href="http://andrewscala.com/meteor/">un tutoriel très détaillé</a> pour comprendre les principales caractéristiques du framework ;</li>
+<li>enfin, <a href="https://github.com/search?q=meteor&amp;ref=reposearch">Github</a> est rempli d'exemples d'applications pour tester Meteor.</li>
+</ul><p>Ce tour d'horizon non-exhaustif illustre l'abondance des articles de qualité accompagnant l'apprentissage de Meteor mais met également en relief l'absence de tutoriel pour les francophones non-anglophones – à l'exception peut-être de la <a href="http://www.etiennebalit.com/2013/04/meteor-b-a-ba-et-bonnes-pratiques/">très bonne traduction</a> de l'article d'Andrew Scala par Etienne Balit. 
+Cet article se propose donc d'expliquer succinctement, et dans la langue de Zinedine Zidane, comment créer sa première application avec le framework Meteor. L'application proposée est par ailleurs très distincte de ce qui est déjà proposé.</p>
 
 <p>L'idée est de créer une application qui servirait à plusieurs usages différents. Pour monter en généralité, l'application prend le nom générique de cloudAtlas. Elle se divise en deux parties. Dans une partie il s'agit d'enregistrer un « cloud » selon deux champs (un titre et un sous-titre par exemple) et de le classer en renseignant un troisième champ de référence. Dans une autre partie, il s'agit de retrouver n'importe quel cloud enregistré selon ce troisième champ de référence. L'application permet ainsi de classer des objets selon divers prix par exemple, puis de retrouver pour chaque prix les objets enregistrés ; elle peut permettre également de classer les films actuellement à l'affiche selon un système de notation (par exemple, entre 1 et 5 étoiles), puis de retrouver pour chaque note les différents films correspondants ; elle permet encore de classer des interlocuteurs selon des spécialisations, et pour chaque spécialisation retrouver le ou les interlocuteurs de référence... Bref, les exemples sont nombreux d'utilisation de ce cloudAtlas. C'est parti !</p>
 
@@ -241,7 +241,7 @@ Notons ici que les 4 variables entre accolades (cloudTitle, cloudSubTitle, cloud
 <p>Il nous faut désormais préciser le comportement de chaque template dans le fichier Javascript. Tout comme le fichier HTML, le fichier Javascript est composé de 3 parties correspondantes aux trois templates. Reprenons-les un par un en suivant l'ordre logique que nous avons déjà pu suivre.</p>
 
 <p>Le formulaire d'enregistrement des « clouds » comprend un bouton « submit » qui se traduit en Javascript sous la forme d'un événement. Cet événement, l'appui sur le bouton submit, déclenche plusieurs comportements qui doivent permettre à Meteor d'enregistrer les champs renseignés dans le formulaire.
-Meteor possède sa propre grammaire dont il est évidemment très intéressant et utile de prendre connaissance, disponible sur sa documentation sur son site. Dans Meteor, un événement se code ainsi :</p>
+Meteor possède sa propre grammaire dont il est évidemment très intéressant et utile de prendre connaissance, disponible sur <a href="http://docs.meteor.com/">sa documentation sur son site</a>. Dans Meteor, un événement se code ainsi :</p>
 
 <pre><code>Template.cloudForm.events = {
     'submit' : function (e, tmpl) {
