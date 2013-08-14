@@ -1,37 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <title>CloudAtlas : une application pour tester Meteor.JS (tutoriel Fr) by tibomahe</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <title>CloudAtlas : une application pour tester Meteor.JS (tutoriel Fr) by tibomahe</title>
   </head>
-
   <body>
-    <div id="container">
-      <div class="inner">
+    <div class="wrapper">
+      <header>
+        <h1>CloudAtlas : une application pour tester Meteor.JS (tutoriel Fr)</h1>
+        <p>A simple app experiment for categorization using Meteor.JS </p>
 
-        <header>
-          <h1>CloudAtlas : une application pour tester Meteor.JS (tutoriel Fr)</h1>
-          <h2>A simple app experiment for categorization using Meteor.JS </h2>
-        </header>
+        <p class="view"><a href="https://github.com/tibomahe/cloudAtlas-Meteor-App">View the Project on GitHub <small>tibomahe/cloudAtlas-Meteor-App</small></a></p>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/tibomahe/cloudAtlas-Meteor-App/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/tibomahe/cloudAtlas-Meteor-App/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/tibomahe/cloudAtlas-Meteor-App" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
 
-        <hr>
-
-        <section id="main_content">
-          <h1>
+        <ul>
+          <li><a href="https://github.com/tibomahe/cloudAtlas-Meteor-App/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/tibomahe/cloudAtlas-Meteor-App/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/tibomahe/cloudAtlas-Meteor-App">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
 <a name="tester-meteor-sous-mac-le-framework-des-applications-de-demain" class="anchor" href="#tester-meteor-sous-mac-le-framework-des-applications-de-demain"><span class="octicon octicon-link"></span></a>TESTER METEOR SOUS MAC, LE FRAMEWORK DES APPLICATIONS DE DEMAIN</h1>
 
 <p>Meteor est un framework Javascript assez récent permettant de développer des pages dynamiques et des applications en un rien de temps mais également en très peu de ligne de codes. Utilisant notamment Node.js, Meteor permet de développer son application uniquement en Javascript, côté client aussi bien, et c'est là la force du framework, que côté serveur. Une merveilleuse idée quand on constate le succès que connait aujourd'hui le langage, notamment simplifié et démocratisé par jQuery. Une merveilleuse idée surtout pour nous autres débutants qui apprécierons grandement de n'avoir qu'un seul langage de programmation à gérer, et à tenter de comprendre. </p>
@@ -61,15 +58,18 @@ Cet article se propose donc d'expliquer succinctement, et dans la langue de Zine
 <p>L'installation s'effectue à partie du Terminal, mais diffère selon le système d'exploitation.
 Pour Mac, il suffira de taper cette ligne de code :</p>
 
-<p>curl <a href="https://install.meteor.com">https://install.meteor.com</a> | /bin/sh</p>
+<pre><code>curl https://install.meteor.com | /bin/sh
+</code></pre>
 
 <p>L'installation nécessitera sans doute votre mot de passe de session utilisateur, et parfois l'ajout de l'entête sudo avant la ligne de code.</p>
 
 <p>Pour créer l'application, il suffit de rester dans le Terminal est de taper tout simplement :</p>
 
-<p>meteor create MonApplication 
-et en l'occurrence ici :
-meteor create cloudAtlas</p>
+<pre><code>meteor create MonApplication 
+</code></pre>
+
+<p>et en l'occurrence ici :
+    meteor create cloudAtlas</p>
 
 <p>// Quelques commandes bonnes à connaître pour naviguer via la fenêtre de Terminal :
 <em>ls</em> permet de faire la liste des dossiers et documents contenus dans le dossier dans lequel on se trouve
@@ -77,11 +77,13 @@ meteor create cloudAtlas</p>
 
 <p>Ainsi, pour démarrer notre application, il nous suffit de nous y rendre tout d'abord :</p>
 
-<p>cd cloudAtlas</p>
+<pre><code>cd cloudAtlas
+</code></pre>
 
 <p>puis de la lancer avec Meteor :</p>
 
-<p>meteor </p>
+<pre><code>meteor 
+</code></pre>
 
 <p>Une fois l'application lancée, elle sera accessible à une adresse local depuis n'importe quel navigateur de votre poste : http://localhost:3000/ . On y trouvera par défaut une page « Hello World ! » vous souhaitant la bienvenue.</p>
 
@@ -98,13 +100,14 @@ meteor create cloudAtlas</p>
 
 <p>Un boolean est comme une condition (d'où la présence du if d'ailleurs), qui renvoi un accord quand elle est remplie, ou un désaccord quand elle ne l'est pas. Ce que signifie donc Meteor.isClient c'est que ce qui suit (entre les premières accolades) ne doit être exécuté que du côté client (la condition), et évidemment  Meteor.isServer que du côté serveur. La structure du fichier .js ressemble donc pour l'instant à ceci :</p>
 
-<p>if (Meteor.isClient) {</p>
+<pre><code>if (Meteor.isClient) {
 
-<p>}</p>
+}
 
-<p>if (Meteor.isServer) {</p>
+if (Meteor.isServer) {
 
-<p>}</p>
+}
+</code></pre>
 
 <p>Le code qui n'est présent dans aucune des deux conditions est exécuté des deux côtés. Pour notre part, nous ne mettrons principalement notre code que dans la première accolade, du côté client donc. Mais nous y reviendrons plus tard, car un deuxième point important est à noter.</p>
 
@@ -118,40 +121,54 @@ meteor create cloudAtlas</p>
 <p>Voyons à quoi ressemble notre code HTML.</p>
 
 <p>Tout d'abord, il est nécessaire de définir un titre dans les balises head, sans avoir à préciser cependant la mention du &lt;!DOCTYPE&gt; :
-</p>
-    cloudAtlas<p>Puis dans le body, nous faisons apparaître les trois parties de notre application :</p>
+    </p>
+        cloudAtlas<p>Puis dans le body, nous faisons apparaître les trois parties de notre application :</p>
 
-<p></p>
-    <div>
-        <h1>
-<a name="cloudatlas" class="anchor" href="#cloudatlas"><span class="octicon octicon-link"></span></a>CloudAtlas</h1>
-        <div>
+<pre><code>&lt;body&gt;
+    &lt;div id="app"&gt;
+        &lt;h1&gt;CloudAtlas&lt;/h1&gt;
+        &lt;div id="cloud-search"&gt;
             {{&gt; cloudSearch}}
-        </div>
-        <div>
+        &lt;/div&gt;
+        &lt;div id="cloud-form"&gt;
             {{&gt; cloudForm}}
-        </div>
-        <div>
+        &lt;/div&gt;
+        &lt;div id="cloud-atlas"&gt;
             {{&gt; cloudAtlas}}
-        </div>
-    </div>
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
 
+<p>Les trois parties sont intégrées dans une     </p><div> englobante (« app ») qui facilitera la manipulation par la suite avec le CSS. L'application commence par un titre sobrement appelé « CloudAtlas ». Le code de chaque partie est à préciser : il s'agit tout simplement de trois <div> possédant chacune un id distinctif afin de pouvoir les manipuler plus facilement et désignant la position des parties. Chaque partie ne contient qu'une variable mise entre double accolades et désignant chacune le template à laquelle elle se réfère. Bien évidemment, chacun de ces 3 templates est à définir directement après la fermeture du body.
 
-<p>Les trois parties sont intégrées dans une </p><div> englobante (« app ») qui facilitera la manipulation par la suite avec le CSS. L'application commence par un titre sobrement appelé « CloudAtlas ». Le code de chaque partie est à préciser : il s'agit tout simplement de trois <div> possédant chacune un id distinctif afin de pouvoir les manipuler plus facilement et désignant la position des parties. Chaque partie ne contient qu'une variable mise entre double accolades et désignant chacune le template à laquelle elle se réfère. Bien évidemment, chacun de ces 3 templates est à définir directement après la fermeture du body.
+<p>L'ordre est indifférent. Suivons l'ordre logique du processus et commençons par celui du milieu, c'est-à-dire le formulaire de création de « clouds », dont le template est intitulé ci-dessus « cloudForm ». La balise pour définir un template est tout simplement la balise  et celle, plus connue, pour un formulaire est     </p>. On obtient ainsi ceci :
 
-<p>L'ordre est indifférent. Suivons l'ordre logique du processus et commençons par celui du milieu, c'est-à-dire le formulaire de création de « clouds », dont le template est intitulé ci-dessus « cloudForm ». La balise pour définir un template est tout simplement la balise  et celle, plus connue, pour un formulaire est </p>. On obtient ainsi ceci :
-
-<p>
-        <p>REGISTER A CLOUD</p>
-        CHOOSEfield1field2field3field4field5<div>
-                </div>
-      
-</p>
+<pre><code>&lt;template name="cloudForm"&gt;
+     &lt;form&gt;
+        &lt;p&gt;REGISTER A CLOUD&lt;/p&gt;
+        &lt;input id="cloudTitle" placeholder="Name" required /&gt;
+        &lt;input id="cloudSubTitle" placeholder="First Name"required /&gt;
+        &lt;select id="cloudType" required&gt;
+                &lt;option value="0"&gt;CHOOSE&lt;/option&gt;
+                &lt;option value="field1"&gt;field1&lt;/option&gt;
+                &lt;option value="field2"&gt;field2&lt;/option&gt;
+                &lt;option value="field3"&gt;field3&lt;/option&gt;
+                &lt;option value="field4"&gt;field4&lt;/option&gt;
+                &lt;option value="field5"&gt;field5&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;textarea rows="4" cols="40" id="cloudComment" placeholder="Comment" required&gt;&lt;/textarea&gt;
+        &lt;div class="submit"&gt;
+            &lt;input type="submit" value="Add New Cloud" /&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/template&gt;
+</code></pre>
 
 <p>On retrouve dans ce template uniquement un formulaire HTML très simple, comprenant deux inputs (les deux champs de titre et de sous-titre qui qualifient le « cloud » que l'on enregistre), un bouton select pour classer le cloud dans un des champs de référence (les 5 fields ici), un textarea ajouter un commentaire, et enfin le bouton submit pour demande à l'application d'enregistrer tous ces renseignements. Nous verrons par la suite ce qui se passe derrière tout ca.</p>
 
-<p>Demandons désormais à l'application d'afficher tous les « clouds » que l'on enregistre. Bien sûr, ca ne fonctionnera pas encore puisque nous n'avons pas encore attaquer le Javascript. Cette partie correspond au template intitulé ci-dessus « cloudAtlas ». On cherche pour l'instant à simplement afficher dans une liste </p>
-<ul> faite de <li> donc les différents « clouds ». Pour nous y retrouver sur l'interface utilisateur, il est utile ici d'ajouter un titre de section :
+<p>Demandons désormais à l'application d'afficher tous les « clouds » que l'on enregistre. Bien sûr, ca ne fonctionnera pas encore puisque nous n'avons pas encore attaquer le Javascript. Cette partie correspond au template intitulé ci-dessus « cloudAtlas ». On cherche pour l'instant à simplement afficher dans une liste     </p>
+<ul> faite de     <li> donc les différents « clouds ». Pour nous y retrouver sur l'interface utilisateur, il est utile ici d'ajouter un titre de section :
 
 <p><h2>
 <a name="see-all-clouds" class="anchor" href="#see-all-clouds"><span class="octicon octicon-link"></span></a>//See All Clouds</h2>
@@ -369,15 +386,13 @@ tibomahe.com</p>
 </ul>
 </div>
 </div>
-        </section>
-
-        <footer>
-          CloudAtlas : une application pour tester Meteor.JS (tutoriel Fr) is maintained by <a href="https://github.com/tibomahe">tibomahe</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-        
-      </div>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/tibomahe">tibomahe</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
     </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
   </body>
 </html>
